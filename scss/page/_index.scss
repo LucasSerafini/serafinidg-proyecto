@@ -1,0 +1,38 @@
+main{ 
+    .banner{
+        background-image: url(../images/banner.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        .contenido-banner{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                min-height: 540px;
+                z-index: 2;
+                padding: 50px 0 0 0;
+                    .presentacionBanner{
+                            z-index: 2;
+                            font-size: 100%;
+                            color: white;
+                        }
+                    .servicio-banner{
+                        display: flex;
+                         z-index: 2;
+                    }
+                    .realizo1{
+                        font-family: "Bebas Neue", cursive;
+                        font-size: 800%;
+                        margin: 13px;
+                        color: white;
+                        z-index: -1;
+                        animation-name: para-d-grafico;
+                        animation-duration: 4s;
+                        animation-iteration-count: infinite;
+                    }
+
+                
+        }
+    }
+}

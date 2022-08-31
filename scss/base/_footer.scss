@@ -1,0 +1,26 @@
+.footer{ 
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100vw !important;
+    background-color: #ece5f0;
+    justify-content: center;
+    align-items: center;
+        .listFooter{
+            display: flex;
+            justify-content: center;
+            padding: 25px;
+            margin-bottom: 0 !important;
+            /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
+            list-style-type: none;
+            a {
+                .iconosRedes{
+                    width: 25px;
+                    margin: 5px;
+                }
+            }
+        }
+        .logoFooter{
+            width: 40px;
+        }
+}

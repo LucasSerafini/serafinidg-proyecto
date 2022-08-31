@@ -1,0 +1,714 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Darker+Grotesque:wght@300;400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* COLORS */
+
+/* #012622 */
+/* #003B36 */
+/* #ece5f0 */
+/* #E98A15 */
+
+/* HEADER BOOPSTRAP */
+/* NAV */
+.header-nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  width: 100vw;
+}
+
+.page-html {
+  font-size: 90%;
+  font-weight: 500 !important;
+  text-decoration: none;
+  color: rgb(31, 28, 28);
+  margin: 0 20px 0 20px;
+}
+
+.navbar-nav {
+  --bs-nav-link-hover-color: #f39200;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  background-color: #ece5f0;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.footer .listFooter {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  margin-bottom: 0 !important;
+  /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
+  list-style-type: none;
+}
+
+.iconosRedes {
+  width: 25px;
+  margin: 5px;
+}
+
+.logoFooter img {
+  width: 40px;
+}
+
+/* TITULOS Y SUBTITULOS */
+
+.titulos {
+  font-family: "Poppins", sans-serif;
+  font-size: 300%;
+  color: #003b36;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  padding: 25px 0 25px 0;
+  font-size: 80%;
+}
+
+/* INDEX/HOME */
+
+.banner {
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contenido-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 530px;
+  z-index: 2;
+  padding: 50px 0 0 0;
+}
+
+.presentacionBanner {
+  z-index: 2;
+  font-size: 100%;
+  color: white;
+}
+
+.servicio-banner {
+  display: flex;
+  z-index: 2;
+}
+
+.realizo1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 800%;
+  margin: 13px;
+  color: white;
+  z-index: -1;
+  animation-name: diseño-grafico;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+/* SOBRE MI */
+
+.infoPersonal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 50px 0;
+}
+.fotoPerfil {
+  /* margin: 80px 20px 0 285px; */
+  height: 500px;
+  margin: 0 80px 0 0;
+}
+
+.textPrincipal {
+  margin: 0 0 20px 0;
+  align-items: center;
+}
+
+.textPerfil {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.textDescripcion {
+  width: 600px;
+}
+
+/* PORTFOLIO */
+.estructura-portfolio {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 40px 0;
+  min-height: calc(100vh - 120px - 130px);
+}
+
+.container-galeria {
+  display: grid;
+  margin: 0 0 50px 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "work1 work2 work3"
+    "work4 work5 work6";
+  justify-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.container-galeria div {
+  height: 200px;
+  margin: 0 0 25px 0;
+}
+
+.container-galeria img {
+  width: 300px;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.container-galeria img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.tituloPortfolio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
+
+.subtituloPortfolio {
+  margin: 0 0 0 20px;
+}
+
+/* CONTACTO */
+
+.flex-formulario {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px 0 0;
+}
+
+main .formulario {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  margin: 0 100px 0 0;
+}
+
+main form input,
+textarea,
+select {
+  font-family: "Montserrat", sans-serif;
+}
+
+.flex-formulario .formulario .input {
+  border-radius: 20px;
+}
+
+/* SERVICIOS */
+
+.flex-content-serv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoServicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 50px 0;
+}
+
+.placaServ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  height: auto;
+  background-color: #ece5f0;
+}
+
+.placaServ .iconosServ {
+  width: 70px;
+  height: 70px;
+}
+
+.categoriaServ {
+  margin: 60px 0 20px 0;
+}
+
+.titleServ {
+  font-size: 100%;
+  font-weight: 700;
+  text-align: center;
+  margin: 25px 0 0 0;
+}
+
+.parrafoServ {
+  margin: 5px 0 0 0;
+  text-align: center;
+  padding: 20px;
+}
+
+@keyframes diseño-grafico {
+  0% {
+    color: #ece5f05f;
+  }
+  50% {
+    color: #ece5f0;
+  }
+  100% {
+    color: #ece5f05f;
+  }
+}
+
+/* MEDIA QUERYS */
+/* formulario 1200 */
+
+@media (max-width: 1070px) {
+
+/* CONTACTO 1200 */
+
+  .logoParaleloForm {
+    display: none;
+  }
+
+  .flex-formulario {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 50px 0 0;
+    width: auto;
+    justify-content: center;
+      }
+
+  main .formulario {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
+    margin: 0 0 0 150px;
+    flex-wrap: wrap;
+  }
+}
+
+/* 1070PX */
+
+/* HEADER*/
+
+@media (max-width: 1070px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: #ece5f0;
+    /* background-image: linear-gradient(to bottom, #635d52, #c8c4d700); */
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    z-index: 300;
+    height: 170px;
+    width: 100vw;
+    padding: 30px 0 30px 0px;
+  }
+
+  .header .logoSerafini {
+    padding: 0 0 15px 0;
+  }
+
+  /* INDEX */
+
+  .grid-container .banner .imagenBanner {
+    z-index: -2;
+    position: fixed;
+    width: max-content;
+  }
+  .realizo1 {
+    font-size: 800%;
+    margin: 13px;
+    color: white;
+  }
+
+  .banner .imagenBanner {
+    z-index: -2;
+    position: fixed;
+    width: max-content;
+  }
+
+  /* SOBRE MI */
+
+  .infoPersonal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 80vw;
+    padding: 25px;
+   }
+
+  .fotoPerfil {
+    width: 415px;
+    margin: 25px 0px 25px 0;
+  }
+
+  .textPerfil {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 15px 0 0 0;
+    padding: 0 0 0 50px;
+  }
+
+  .textDescripcion {
+    width: 80vw;
+  }
+}
+
+/*  */
+@media (max-width: 992px) {
+}
+
+/* 930PX - GALERIA PORTFOLIO*/
+
+@media (max-width: 930px) {
+  .container-galeria {
+    display: grid;
+    max-width: 600px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "work1 work2"
+      "work3 work4"
+      "work5 work6";
+    justify-items: center;
+    align-self: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .container-galeria div {
+    height: 200px;
+  }
+
+  .container-galeria img {
+    width: 300px;
+    overflow: hidden;
+  }
+}
+
+/* 749px */
+/* HEADER */
+
+@media (max-width: 749px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    background-color: #ece5f0;
+    /* background-image: linear-gradient(to bottom, #635d52, #c8c4d700); */
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    z-index: 300;
+    height: 170px;
+    width: 100vw;
+    padding: 30px 0 30px 15px;
+  }
+
+  .header .nav .listaPrincipal {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    width: 150px;
+    align-content: flex-start;
+  }
+
+  .header .nav .listaPrincipal li a {
+    font-size: 80%;
+    margin: 0 35px 0 35px;
+    font-weight: 700;
+  }
+  .header .nav .listaPrincipal li a {
+    text-decoration: none;
+    color: #2b2b2b;
+  }
+  .header .nav .listaPrincipal li a:hover {
+    color: #f39200;
+    transition: 0.3s;
+  }
+  .header .logoSerafini {
+    padding: 0 0 0 0;
+  }
+
+  /* INDEX 749 */
+
+  .banner {
+    grid-area: banner;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .banner .imagenBanner {
+    z-index: -2;
+    position: fixed;
+    width: max-content;
+  }
+  .banner .presentacionBanner {
+    z-index: 2;
+    font-size: 100%;
+    color: white;
+    margin: 0 0 20px 0;
+  }
+
+  .servicio-banner {
+    display: flex;
+  }
+
+  .realizo1 {
+    font-size: 600%;
+    color: white;
+  }
+
+  .boton {
+    border-radius: 30px;
+    width: 200px;
+    height: 30px;
+    background-color: #003b36;
+    color: white;
+    margin: 20px 0 0 0;
+  }
+}
+
+/* GALERIA PORTFOLIO 633 */
+
+@media (max-width: 633px) {
+  .container-galeria {
+    display: grid;
+    max-width: 100vw;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "work1"
+      "work2"
+      "work3"
+      "work4"
+      "work5"
+      "work6";
+    justify-items: center;
+    align-self: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .container-galeria div {
+    height: 350px;
+  }
+
+  .container-galeria img {
+    width: 500px;
+    overflow: hidden;
+  }
+
+  .tituloPortfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+  }
+
+  .subtituloPortfolio {
+    margin: 0 0 0 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  /* INDEX */
+
+  .servicio-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .realizo1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 600%;
+    color: white;
+    margin: 0;
+  }
+  /* formulario contacto 580 */
+
+  .logoParaleloForm {
+    display: none;
+  }
+
+  .flex-formulario {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+   
+  }
+
+  main .formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
+    width: 100%;
+     
+  }
+  textarea {
+    resize: vertical;
+    width: 100%;
+  }
+
+}
+/* HEADER 415PX */
+
+@media (max-width: 415px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    background-color: #ece5f0;
+    /* background-image: linear-gradient(to bottom, #635d52, #c8c4d700); */
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    z-index: 300;
+    height: 170px;
+    width: 100vw;
+    padding: 30px 0 30px 15px;
+  }
+
+  .header .nav .listaPrincipal {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .header .nav .listaPrincipal li a {
+    font-size: 80%;
+    margin: 0 35px 0 35px;
+    font-weight: 700;
+  }
+  .header .nav .listaPrincipal li a {
+    text-decoration: none;
+    color: #2b2b2b;
+  }
+  .header .nav .listaPrincipal li a:hover {
+    color: #f39200;
+    transition: 0.3s;
+  }
+  .header .logoSerafini {
+    padding: 0 0 0 0;
+  }
+
+  /* INDEX */
+
+  .banner {
+    grid-area: banner;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .banner .imagenBanner {
+    z-index: -2;
+    position: fixed;
+    width: max-content;
+  }
+  .banner .presentacionBanner {
+    z-index: 2;
+    font-size: 70%;
+    font-weight: 800;
+    color: white;
+    margin: 50px 0 20px 0;
+  }
+
+  .servicio-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .realizo1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 650%;
+    margin: 0;
+    color: white;
+  }
+
+  /* SOBRE MI */
+  .infoPersonal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: 0 0 0 35px;
+  }
+  .textPerfil {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 0 0;
+  }
+
+  .textDescripcion {
+    width: 80vw;
+  }
+
+  /* SERVICIOS */
+
+  .placaServ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 15px 0;
+    padding: 20px;
+    width: 100vw;
+    height: auto;
+    background-color: #ece5f0;
+  }
+
+  .parrafoServ {
+    margin: 5px 0 0 0;
+    text-align: left;
+    padding: 20px;
+  }
+}

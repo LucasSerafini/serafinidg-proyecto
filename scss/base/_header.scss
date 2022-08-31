@@ -1,0 +1,19 @@
+.header-nav { 
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    width: 100vw !important;
+    padding: 0;
+    .navbar-nav{
+        &:hover{
+            --bs-nav-link-hover-color: #f39200;
+                }
+        .page-html{
+            font-size: 90%;
+            font-weight: 500 !important;
+             text-decoration: none;
+            color: rgb(31, 28, 28);
+            margin: 0 20px 0 20px;
+        }
+    }
+}

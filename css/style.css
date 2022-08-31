@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Darker+Grotesque:wght@300;400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif; }
+
+.header-nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  width: 100vw !important;
+  padding: 0; }
+  .header-nav .navbar-nav:hover {
+    --bs-nav-link-hover-color: #f39200; }
+  .header-nav .navbar-nav .page-html {
+    font-size: 90%;
+    font-weight: 500 !important;
+    text-decoration: none;
+    color: #1f1c1c;
+    margin: 0 20px 0 20px; }
+
+main .banner {
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center; }
+  main .banner .contenido-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 540px;
+    z-index: 2;
+    padding: 50px 0 0 0; }
+    main .banner .contenido-banner .presentacionBanner {
+      z-index: 2;
+      font-size: 100%;
+      color: white; }
+    main .banner .contenido-banner .servicio-banner {
+      display: flex;
+      z-index: 2; }
+    main .banner .contenido-banner .realizo1 {
+      font-family: "Bebas Neue", cursive;
+      font-size: 800%;
+      margin: 13px;
+      color: white;
+      z-index: -1;
+      animation-name: para-d-grafico;
+      animation-duration: 4s;
+      animation-iteration-count: infinite; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100vw !important;
+  background-color: #ece5f0;
+  justify-content: center;
+  align-items: center; }
+  .footer .listFooter {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    margin-bottom: 0 !important;
+    /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
+    list-style-type: none; }
+    .footer .listFooter a .iconosRedes {
+      width: 25px;
+      margin: 5px; }
+  .footer .logoFooter {
+    width: 40px; }
