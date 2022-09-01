@@ -16,14 +16,18 @@
   z-index: 3;
   width: 100vw !important;
   padding: 0; }
-  .header-nav .navbar-nav:hover {
-    --bs-nav-link-hover-color: #f39200; }
   .header-nav .navbar-nav .page-html {
     font-size: 90%;
     font-weight: 500 !important;
     text-decoration: none;
     color: #1f1c1c;
     margin: 0 20px 0 20px; }
+  .header-nav .navbar-nav .nav-link:focus, .header-nav .navbar-nav .nav-link:hover {
+    color: #f39200;
+    transform: scale(1.1);
+    transition: .3s;
+    font-weight: 600 !important;
+    translate: 0 !important; }
 
 main .banner {
   background-image: url(../images/banner.jpg);
@@ -55,6 +59,111 @@ main .banner {
       animation-duration: 4s;
       animation-iteration-count: infinite; }
 
+main .infoPersonal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 50px 0; }
+  main .infoPersonal .fotoPerfil {
+    /* margin: 80px 20px 0 285px; */
+    height: 500px;
+    margin: 0 80px 0 0; }
+  main .infoPersonal .textPerfil {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    main .infoPersonal .textPerfil .textPrincipal {
+      margin: 0 0 20px 0;
+      align-items: center; }
+    main .infoPersonal .textPerfil .textoDescripcion {
+      width: 600px; }
+
+.flex-content-serv {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .flex-content-serv .categoriaServ {
+    margin: 60px 0 20px 0; }
+  .flex-content-serv .infoServicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 50px 0; }
+    .flex-content-serv .infoServicios .placaServ {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      padding: 20px;
+      width: 300px;
+      height: auto;
+      background-color: #ece5f0; }
+      .flex-content-serv .infoServicios .placaServ .iconosServ {
+        width: 70px;
+        height: 70px; }
+      .flex-content-serv .infoServicios .placaServ .titleServ {
+        font-size: 100%;
+        font-weight: 700;
+        text-align: center;
+        margin: 25px 0 0 0; }
+      .flex-content-serv .infoServicios .placaServ .parrafoServ {
+        margin: 5px 0 0 0;
+        text-align: center;
+        padding: 5px; }
+
+.estructura-portfolio {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 40px 0;
+  min-height: calc(100vh - 120px - 130px); }
+  .estructura-portfolio .tituloPortfolio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 20px 0; }
+    .estructura-portfolio .tituloPortfolio .subtituloPortfolio {
+      margin: 0 0 0 20px; }
+  .estructura-portfolio .container-galeria {
+    display: grid;
+    margin: 0 0 50px 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "work1 work2 work3" "work4 work5 work6";
+    justify-items: center;
+    align-self: center;
+    justify-content: center; }
+    .estructura-portfolio .container-galeria div {
+      height: 200px;
+      margin: 0 0 25px 0; }
+      .estructura-portfolio .container-galeria div img {
+        width: 300px;
+        overflow: hidden;
+        margin: 5px; }
+        .estructura-portfolio .container-galeria div img:hover {
+          transform: scale(1.1);
+          transition: 1s; }
+
+.flex-formulario {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 50px 0 0; }
+  .flex-formulario .formulario {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
+    margin: 0 100px 0 0; }
+    .flex-formulario .formulario .textPrincipal {
+      margin: 0 0 20px 0;
+      align-items: center; }
+
+.titulos {
+  font-family: "Poppins", sans-serif;
+  font-size: 300%;
+  color: #003b36; }
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -72,6 +181,9 @@ main .banner {
     list-style-type: none; }
     .footer .listFooter a .iconosRedes {
       width: 25px;
-      margin: 5px; }
+      margin: 10px; }
+      .footer .listFooter a .iconosRedes:hover {
+        transform: scale(1.1);
+        transition: .3s; }
   .footer .logoFooter {
     width: 40px; }

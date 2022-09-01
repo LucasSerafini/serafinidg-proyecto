@@ -16,7 +16,11 @@
             a {
                 .iconosRedes{
                     width: 25px;
-                    margin: 5px;
+                    margin: 10px;
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: .3s;
+                    }
                 }
             }
         }
