@@ -4,6 +4,7 @@
     z-index: 3;
     width: 100vw !important;
     padding: 0;
+    background-color: $colorFondo !important;
     .navbar-nav{
         .page-html{
             font-size: 90%;
@@ -15,7 +16,7 @@
         .nav-link{
             &:focus, 
             &:hover {
-                    color: #f39200;
+                    color: #201e1a;
                     transform: scale(1.1);
                     transition: .3s;
                     font-weight: 600 !important;

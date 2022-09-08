@@ -9,6 +9,7 @@
         font-size: 100%;
         margin: 0 100px 0 0;
         .textPrincipal{
+            @extend %estiloTituloPag;
             margin: 0 0 20px 0;
             align-items: center;
         }

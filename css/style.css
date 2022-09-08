@@ -4,6 +4,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+/* SCSS HEX */
+main .infoPersonal .textPerfil .textPrincipal, .flex-content-serv .tituloServicios, .estructura-portfolio .tituloPortfolio h1, .flex-formulario .formulario .textPrincipal {
+  font-family: "Poppins", sans-serif;
+  font-size: 300%;
+  color: #003b36; }
+
+.estructura-portfolio .tituloPortfolio .subtituloPortfolio {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  color: black; }
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +26,8 @@
   top: 0;
   z-index: 3;
   width: 100vw !important;
-  padding: 0; }
+  padding: 0;
+  background-color: #e2e8ceff !important; }
   .header-nav .navbar-nav .page-html {
     font-size: 90%;
     font-weight: 500 !important;
@@ -23,14 +35,46 @@
     color: #1f1c1c;
     margin: 0 20px 0 20px; }
   .header-nav .navbar-nav .nav-link:focus, .header-nav .navbar-nav .nav-link:hover {
-    color: #f39200;
+    color: #201e1a;
     transform: scale(1.1);
     transition: .3s;
     font-weight: 600 !important;
     translate: 0 !important; }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100vw !important;
+  background-color: #e2e8ceff !important;
+  justify-content: center;
+  align-items: center; }
+  .footer .listFooter {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    margin-bottom: 0 !important;
+    /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
+    list-style-type: none; }
+    .footer .listFooter a .iconosRedes {
+      width: 25px;
+      margin: 10px; }
+      .footer .listFooter a .iconosRedes:hover {
+        transform: scale(1.1);
+        transition: .3s; }
+  .footer .logoFooter {
+    width: 40px; }
+
+.header-nav {
+  background-color: #262626ff; }
+
+main .mensaje-bienvenida {
+  z-index: -5;
+  position: absolute;
+  top: 15; }
+
 main .banner {
-  background-image: url(../images/banner.jpg);
+  background-image: url(../images/banner-min.jpg);
   background-repeat: no-repeat;
   background-position: center; }
   main .banner .contenido-banner {
@@ -66,15 +110,14 @@ main .infoPersonal {
   margin: 50px 0 50px 0; }
   main .infoPersonal .fotoPerfil {
     /* margin: 80px 20px 0 285px; */
-    height: 500px;
-    margin: 0 80px 0 0; }
+    height: 500px; }
   main .infoPersonal .textPerfil {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin: 0 0 0 80px; }
     main .infoPersonal .textPerfil .textPrincipal {
-      margin: 0 0 20px 0;
-      align-items: center; }
+      margin: 0 0 20px 0; }
     main .infoPersonal .textPerfil .textoDescripcion {
       width: 600px; }
 
@@ -82,6 +125,8 @@ main .infoPersonal {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .flex-content-serv .tituloServicios {
+    margin: 50px 0 0 0; }
   .flex-content-serv .categoriaServ {
     margin: 60px 0 20px 0; }
   .flex-content-serv .infoServicios {
@@ -116,15 +161,17 @@ main .infoPersonal {
   display: flex;
   flex-direction: column;
   margin: 0 0 40px 0;
+  align-items: center;
+  justify-content: center;
   min-height: calc(100vh - 120px - 130px); }
   .estructura-portfolio .tituloPortfolio {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 20px 0 20px 0; }
+    margin: 25px 0 0 0; }
     .estructura-portfolio .tituloPortfolio .subtituloPortfolio {
-      margin: 0 0 0 20px; }
+      margin: 0 0 0 25px; }
   .estructura-portfolio .container-galeria {
     display: grid;
     margin: 0 0 50px 0;
@@ -158,32 +205,3 @@ main .infoPersonal {
     .flex-formulario .formulario .textPrincipal {
       margin: 0 0 20px 0;
       align-items: center; }
-
-.titulos {
-  font-family: "Poppins", sans-serif;
-  font-size: 300%;
-  color: #003b36; }
-
-.footer {
-  display: flex;
-  flex-direction: row;
-  height: 100px;
-  width: 100vw !important;
-  background-color: #ece5f0;
-  justify-content: center;
-  align-items: center; }
-  .footer .listFooter {
-    display: flex;
-    justify-content: center;
-    padding: 25px;
-    margin-bottom: 0 !important;
-    /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
-    list-style-type: none; }
-    .footer .listFooter a .iconosRedes {
-      width: 25px;
-      margin: 10px; }
-      .footer .listFooter a .iconosRedes:hover {
-        transform: scale(1.1);
-        transition: .3s; }
-  .footer .logoFooter {
-    width: 40px; }

@@ -1,0 +1,4 @@
+1 - Moficicacíon y/o correccion de titulos. Agregado del la barra vertical "|"
+2 - Compresión de imagenes pesadas- Señalado con (nombre-min.jpg)
+3 - Revisión de los alt="" de las imágenes. Se completaron algunos campos vacios.
+4 - 

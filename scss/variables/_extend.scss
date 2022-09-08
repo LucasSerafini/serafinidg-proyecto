@@ -1,0 +1,15 @@
+%estiloTituloPag {
+    font-family: $titulosPaginas;
+    font-size: 300%;
+    color: #003b36;
+}
+
+%estiloSubPag { 
+    font-family: $subtitulosPaginas;
+    font-size: 100%;
+    color: black;
+}
+
+@mixin estiloHeader ($colorFondo){
+    background-color: $colorFondo; 
+}

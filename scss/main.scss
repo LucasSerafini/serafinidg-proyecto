@@ -1,10 +1,20 @@
+// Variables 
+@import './variables/estilos';
+@import './variables/extend';
+
+
+// General
 @import './base/general';
 @import './base/header';
-@import './page/index';
-@import './page/sobremi';
-@import './page/servicios';
-@import './page/portfolio';
-@import './page/contacto';
-@import './page/estilos';
 @import './base/footer';
-@import './page/mediaqueries';
+
+// Secciones
+@import './secciones/index';
+@import './secciones/sobremi';
+@import './secciones/servicios';
+@import './secciones/portfolio';
+@import './secciones/contacto';
+
+// Medias Queries
+
+@import './secciones/mediaqueries';

@@ -1,6 +1,15 @@
+.header-nav { 
+    @include estiloHeader (#262626ff);
+}
+
 main{ 
+    .mensaje-bienvenida { 
+        z-index: -5;
+        position: absolute;
+        top: 15;
+    }
     .banner{
-        background-image: url(../images/banner.jpg);
+        background-image: url(../images/banner-min.jpg);
         background-repeat: no-repeat;
         background-position: center;
         .contenido-banner{
