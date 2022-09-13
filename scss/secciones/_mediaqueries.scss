@@ -1,0 +1,316 @@
+// INDEX.HTML
+
+@media (max-width: 768px) {
+  main {
+    .banner {
+      .contenido-banner {
+        .realizo1 {
+          font-family: "Bebas Neue", cursive;
+          font-size: 600%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    .banner {
+      .contenido-banner {
+        .realizo1 {
+          font-family: "Bebas Neue", cursive;
+          font-size: 400%;
+          margin: 0 6px 0 6px;
+        }
+      }
+    }
+  }
+}
+
+// SOBREMI.HTML
+@media (max-width: 1200px) {
+  main {
+    .flex-infoPersonal {
+      align-content: center;
+      .foto-infoPersonal {
+        height: 450px;
+      }
+      .texto-infoPersonal {
+        width: 600px;
+        margin: 0 0 0 45px;
+        .titulo-infoPersonal {
+          margin: 0 0 15px 0;
+        }
+        .parrafo-infoPersonal {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  main {
+    .flex-infoPersonal {
+      .texto-infoPersonal {
+        width: 600px;
+        margin: 0 0 0 45px;
+        .titulo-infoPersonal {
+          margin: 0 0 15px 0;
+        }
+        .parrafo-infoPersonal {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    .flex-infoPersonal {
+      flex-direction: column;
+      margin: 0 0 25px 0;
+      .foto-infoPersonal {
+        height: auto;
+        width: 100vw;
+        margin: 0 0 25px 0;
+      }
+      .texto-infoPersonal {
+        width: fit-content;
+        margin: 0 30px 0 30px;
+
+        .titulo-infoPersonal {
+          margin: 0 0 15px 0;
+        }
+        .parrafo-infoPersonal {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+// SERVICIOS
+
+/* SERVICIOS */
+
+/* SERVICIOS */
+
+@media (max-width: 576px) {
+  .flex-content-serv {
+    .placaServ {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 15px 0 15px 0;
+      padding: 20px;
+      width: 100vw;
+      height: auto;
+      background-color: #ece5f0;
+      .parrafoServ {
+        margin: 5px 0 0 0;
+        text-align: left;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+// PORTFOLIO
+
+@media (max-width: 992px) {
+  .estructura-portfolio {
+    .grid-container-porfolio {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "img1 img2"
+        "img3 img4"
+        "img5 img6";
+      .img1 {
+        grid-area: img1;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 40vw;
+          margin: 5px;
+        }
+      }
+
+      .img2 {
+        grid-area: img2;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 40vw;
+          margin: 5px;
+        }
+      }
+
+      .img3 {
+        grid-area: img3;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 40vw;
+          margin: 5px;
+        }
+      }
+
+      .img4 {
+        grid-area: img4;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 40vw;
+          margin: 5px;
+        }
+      }
+
+      .img5 {
+        grid-area: img5;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 40vw;
+          margin: 5px;
+        }
+      }
+
+      .img6 {
+        grid-area: img6;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 40vw;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .estructura-portfolio {
+    .grid-container-porfolio {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
+        "img6";
+      .img1 {
+        grid-area: img1;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 100vw;
+          margin: 5px 0 5px 0;
+        }
+      }
+
+      .img2 {
+        grid-area: img2;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 100vw;
+          margin: 5px 0 5px 0;
+        }
+      }
+
+      .img3 {
+        grid-area: img3;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 100vw;
+          margin: 5px 0 5px 0;
+        }
+      }
+
+      .img4 {
+        grid-area: img4;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 100vw;
+          margin: 5px 0 5px 0;
+        }
+      }
+
+      .img5 {
+        grid-area: img5;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 100vw;
+          margin: 5px 0 5px 0;
+        }
+      }
+
+      .img6 {
+        grid-area: img6;
+        img {
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+          width: 100vw;
+          margin: 5px 0 5px 0;
+        }
+      }
+    }
+  }
+}
+
+// CONTACTO
+
+@media (max-width: 992px) {
+  .flex-formulario {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    margin: 0 10px 10px 10px;
+    .logoParaleloForm {
+      display: none;
+    }
+    .formulario {
+      form {
+        padding: 0 15px 0 0;
+        margin: 25px;
+        textarea {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}

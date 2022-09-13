@@ -5,15 +5,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 /* SCSS HEX */
-main .infoPersonal .textPerfil .textPrincipal, .flex-content-serv .tituloServicios, .estructura-portfolio .tituloPortfolio h1, .flex-formulario .formulario .textPrincipal {
+main .flex-infoPersonal .texto-infoPersonal .titulo-infoPersonal, .flex-content-serv .tituloServicios, .estructura-portfolio .tituloPortfolio h1, .flex-formulario .formulario form h1 {
   font-family: "Poppins", sans-serif;
   font-size: 300%;
   color: #003b36; }
 
-.estructura-portfolio .tituloPortfolio .subtituloPortfolio {
+.estructura-portfolio .tituloPortfolio .subtituloPortfolio, .carousel-fotografia h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 100%;
   color: black; }
+
+.estructura-portfolio .grid-container-porfolio .img1 img, .estructura-portfolio .grid-container-porfolio .img2 img, .estructura-portfolio .grid-container-porfolio .img3 img, .estructura-portfolio .grid-container-porfolio .img4 img, .estructura-portfolio .grid-container-porfolio .img5 img, .estructura-portfolio .grid-container-porfolio .img6 img {
+  width: 300px;
+  margin: 5px; }
+
+.estructura-portfolio .grid-container-porfolio .img1 img:hover, .estructura-portfolio .grid-container-porfolio .img2 img:hover, .estructura-portfolio .grid-container-porfolio .img3 img:hover, .estructura-portfolio .grid-container-porfolio .img4 img:hover, .estructura-portfolio .grid-container-porfolio .img5 img:hover, .estructura-portfolio .grid-container-porfolio .img6 img:hover {
+  transform: scale(1.1);
+  transition: .3s; }
 
 * {
   margin: 0;
@@ -27,7 +35,7 @@ main .infoPersonal .textPerfil .textPrincipal, .flex-content-serv .tituloServici
   z-index: 3;
   width: 100vw !important;
   padding: 0;
-  background-color: #e2e8ceff !important; }
+  background-color: #ece5f0 !important; }
   .header-nav .navbar-nav .page-html {
     font-size: 90%;
     font-weight: 500 !important;
@@ -35,7 +43,7 @@ main .infoPersonal .textPerfil .textPrincipal, .flex-content-serv .tituloServici
     color: #1f1c1c;
     margin: 0 20px 0 20px; }
   .header-nav .navbar-nav .nav-link:focus, .header-nav .navbar-nav .nav-link:hover {
-    color: #201e1a;
+    color: #ff7f11ff;
     transform: scale(1.1);
     transition: .3s;
     font-weight: 600 !important;
@@ -46,7 +54,7 @@ main .infoPersonal .textPerfil .textPrincipal, .flex-content-serv .tituloServici
   flex-direction: row;
   height: 100px;
   width: 100vw !important;
-  background-color: #e2e8ceff !important;
+  background-color: #ece5f0 !important;
   justify-content: center;
   align-items: center; }
   .footer .listFooter {
@@ -103,22 +111,21 @@ main .banner {
       animation-duration: 4s;
       animation-iteration-count: infinite; }
 
-main .infoPersonal {
+main .flex-infoPersonal {
   display: flex;
+  flex-direction: row;
+  width: auto;
+  margin: 50px 50px 50px 50px;
   justify-content: center;
-  align-items: center;
-  margin: 50px 0 50px 0; }
-  main .infoPersonal .fotoPerfil {
-    /* margin: 80px 20px 0 285px; */
+  align-items: center; }
+  main .flex-infoPersonal .foto-infoPersonal {
     height: 500px; }
-  main .infoPersonal .textPerfil {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 0 0 80px; }
-    main .infoPersonal .textPerfil .textPrincipal {
-      margin: 0 0 20px 0; }
-    main .infoPersonal .textPerfil .textoDescripcion {
+  main .flex-infoPersonal .texto-infoPersonal {
+    width: 600px;
+    margin: 0 0 0 45px; }
+    main .flex-infoPersonal .texto-infoPersonal .titulo-infoPersonal {
+      margin: 0 0 15px 0; }
+    main .flex-infoPersonal .texto-infoPersonal .parrafo-infoPersonal {
       width: 600px; }
 
 .flex-content-serv {
@@ -133,17 +140,21 @@ main .infoPersonal {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 0 50px 0; }
     .flex-content-serv .infoServicios .placaServ {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 20px;
+      margin: 30px 20px 20px 20px;
       padding: 20px;
       width: 300px;
       height: auto;
       background-color: #ece5f0; }
+      .flex-content-serv .infoServicios .placaServ:hover {
+        transform: scale(1.1);
+        transition: .3s;
+        border-color: #024f49; }
       .flex-content-serv .infoServicios .placaServ .iconosServ {
         width: 70px;
         height: 70px; }
@@ -162,46 +173,249 @@ main .infoPersonal {
   flex-direction: column;
   margin: 0 0 40px 0;
   align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 120px - 130px); }
+  justify-content: center; }
   .estructura-portfolio .tituloPortfolio {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 25px 0 0 0; }
     .estructura-portfolio .tituloPortfolio .subtituloPortfolio {
-      margin: 0 0 0 25px; }
-  .estructura-portfolio .container-galeria {
+      margin-top: 25px;
+      padding: 0; }
+  .estructura-portfolio .grid-container-porfolio {
     display: grid;
-    margin: 0 0 50px 0;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "work1 work2 work3" "work4 work5 work6";
-    justify-items: center;
-    align-self: center;
-    justify-content: center; }
-    .estructura-portfolio .container-galeria div {
-      height: 200px;
-      margin: 0 0 25px 0; }
-      .estructura-portfolio .container-galeria div img {
-        width: 300px;
-        overflow: hidden;
-        margin: 5px; }
-        .estructura-portfolio .container-galeria div img:hover {
-          transform: scale(1.1);
-          transition: 1s; }
+    grid-template-areas: "img1 img2 img3" "img4 img5 img6"; }
+    .estructura-portfolio .grid-container-porfolio .img1 {
+      grid-area: img1; }
+    .estructura-portfolio .grid-container-porfolio .img2 {
+      grid-area: img2; }
+    .estructura-portfolio .grid-container-porfolio .img3 {
+      grid-area: img3; }
+    .estructura-portfolio .grid-container-porfolio .img4 {
+      grid-area: img4; }
+    .estructura-portfolio .grid-container-porfolio .img5 {
+      grid-area: img5; }
+    .estructura-portfolio .grid-container-porfolio .img6 {
+      grid-area: img6; }
+
+.carousel-fotografia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .carousel-fotografia h2 {
+    margin: 25px 0 25px 0; }
 
 .flex-formulario {
   display: flex;
-  justify-content: space-between;
-  margin: 50px 50px 0 0; }
-  .flex-formulario .formulario {
+  flex-direction: row;
+  width: 100vw;
+  margin: 0 !important; }
+  .flex-formulario .logoParaleloForm {
+    width: 550px; }
+  .flex-formulario .formulario form {
+    padding: 25px; }
+    .flex-formulario .formulario form textarea {
+      width: fit-content; }
+
+@keyframes para-d-grafico {
+  0% {
+    color: #ece5f05f; }
+  50% {
+    color: #ece5f0; }
+  100% {
+    color: #ece5f05f; } }
+
+@media (max-width: 768px) {
+  main .banner .contenido-banner .realizo1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 600%; } }
+
+@media (max-width: 576px) {
+  main .banner .contenido-banner .realizo1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 400%;
+    margin: 0 6px 0 6px; } }
+
+@media (max-width: 1200px) {
+  main .flex-infoPersonal {
+    align-content: center; }
+    main .flex-infoPersonal .foto-infoPersonal {
+      height: 450px; }
+    main .flex-infoPersonal .texto-infoPersonal {
+      width: 600px;
+      margin: 0 0 0 45px; }
+      main .flex-infoPersonal .texto-infoPersonal .titulo-infoPersonal {
+        margin: 0 0 15px 0; }
+      main .flex-infoPersonal .texto-infoPersonal .parrafo-infoPersonal {
+        width: 500px; } }
+
+@media (max-width: 992px) {
+  main .flex-infoPersonal .texto-infoPersonal {
+    width: 600px;
+    margin: 0 0 0 45px; }
+    main .flex-infoPersonal .texto-infoPersonal .titulo-infoPersonal {
+      margin: 0 0 15px 0; }
+    main .flex-infoPersonal .texto-infoPersonal .parrafo-infoPersonal {
+      width: auto; } }
+
+@media (max-width: 768px) {
+  main .flex-infoPersonal {
+    flex-direction: column;
+    margin: 0 0 25px 0; }
+    main .flex-infoPersonal .foto-infoPersonal {
+      height: auto;
+      width: 100vw;
+      margin: 0 0 25px 0; }
+    main .flex-infoPersonal .texto-infoPersonal {
+      width: fit-content;
+      margin: 0 30px 0 30px; }
+      main .flex-infoPersonal .texto-infoPersonal .titulo-infoPersonal {
+        margin: 0 0 15px 0; }
+      main .flex-infoPersonal .texto-infoPersonal .parrafo-infoPersonal {
+        width: fit-content; } }
+
+/* SERVICIOS */
+/* SERVICIOS */
+@media (max-width: 576px) {
+  .flex-content-serv .placaServ {
     display: flex;
-    justify-content: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 100%;
-    margin: 0 100px 0 0; }
-    .flex-formulario .formulario .textPrincipal {
-      margin: 0 0 20px 0;
-      align-items: center; }
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 15px 0;
+    padding: 20px;
+    width: 100vw;
+    height: auto;
+    background-color: #ece5f0; }
+    .flex-content-serv .placaServ .parrafoServ {
+      margin: 5px 0 0 0;
+      text-align: left;
+      padding: 20px; } }
+
+@media (max-width: 992px) {
+  .estructura-portfolio .grid-container-porfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6"; }
+    .estructura-portfolio .grid-container-porfolio .img1 {
+      grid-area: img1; }
+      .estructura-portfolio .grid-container-porfolio .img1 img {
+        width: 40vw;
+        margin: 5px; }
+        .estructura-portfolio .grid-container-porfolio .img1 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img2 {
+      grid-area: img2; }
+      .estructura-portfolio .grid-container-porfolio .img2 img {
+        width: 40vw;
+        margin: 5px; }
+        .estructura-portfolio .grid-container-porfolio .img2 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img3 {
+      grid-area: img3; }
+      .estructura-portfolio .grid-container-porfolio .img3 img {
+        width: 40vw;
+        margin: 5px; }
+        .estructura-portfolio .grid-container-porfolio .img3 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img4 {
+      grid-area: img4; }
+      .estructura-portfolio .grid-container-porfolio .img4 img {
+        width: 40vw;
+        margin: 5px; }
+        .estructura-portfolio .grid-container-porfolio .img4 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img5 {
+      grid-area: img5; }
+      .estructura-portfolio .grid-container-porfolio .img5 img {
+        width: 40vw;
+        margin: 5px; }
+        .estructura-portfolio .grid-container-porfolio .img5 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img6 {
+      grid-area: img6; }
+      .estructura-portfolio .grid-container-porfolio .img6 img {
+        width: 40vw;
+        margin: 5px; }
+        .estructura-portfolio .grid-container-porfolio .img6 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; } }
+
+@media (max-width: 680px) {
+  .estructura-portfolio .grid-container-porfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6"; }
+    .estructura-portfolio .grid-container-porfolio .img1 {
+      grid-area: img1; }
+      .estructura-portfolio .grid-container-porfolio .img1 img {
+        width: 100vw;
+        margin: 5px 0 5px 0; }
+        .estructura-portfolio .grid-container-porfolio .img1 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img2 {
+      grid-area: img2; }
+      .estructura-portfolio .grid-container-porfolio .img2 img {
+        width: 100vw;
+        margin: 5px 0 5px 0; }
+        .estructura-portfolio .grid-container-porfolio .img2 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img3 {
+      grid-area: img3; }
+      .estructura-portfolio .grid-container-porfolio .img3 img {
+        width: 100vw;
+        margin: 5px 0 5px 0; }
+        .estructura-portfolio .grid-container-porfolio .img3 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img4 {
+      grid-area: img4; }
+      .estructura-portfolio .grid-container-porfolio .img4 img {
+        width: 100vw;
+        margin: 5px 0 5px 0; }
+        .estructura-portfolio .grid-container-porfolio .img4 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img5 {
+      grid-area: img5; }
+      .estructura-portfolio .grid-container-porfolio .img5 img {
+        width: 100vw;
+        margin: 5px 0 5px 0; }
+        .estructura-portfolio .grid-container-porfolio .img5 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; }
+    .estructura-portfolio .grid-container-porfolio .img6 {
+      grid-area: img6; }
+      .estructura-portfolio .grid-container-porfolio .img6 img {
+        width: 100vw;
+        margin: 5px 0 5px 0; }
+        .estructura-portfolio .grid-container-porfolio .img6 img:hover {
+          transform: scale(1.1);
+          transition: 0.3s; } }
+
+@media (max-width: 992px) {
+  .flex-formulario {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    margin: 0 10px 10px 10px; }
+    .flex-formulario .logoParaleloForm {
+      display: none; }
+    .flex-formulario .formulario form {
+      padding: 0 15px 0 0;
+      margin: 25px; }
+      .flex-formulario .formulario form textarea {
+        width: fit-content; } }

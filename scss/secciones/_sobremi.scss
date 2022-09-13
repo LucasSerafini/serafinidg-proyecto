@@ -1,25 +1,53 @@
-main{ 
-    .infoPersonal{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 50px 0 50px 0;
-            .fotoPerfil{
-                /* margin: 80px 20px 0 285px; */
-                height: 500px;
-               }
-            .textPerfil{
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                margin: 0 0 0 80px;
-                    .textPrincipal{
-                        @extend %estiloTituloPag;
-                        margin: 0 0 20px 0;
-                     }
-                    .textoDescripcion{
-                        width: 600px;
-                    }
+main {
+  .flex-infoPersonal {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: 50px 50px 50px 50px;
+    justify-content: center;
+    align-items: center;
+        .foto-infoPersonal {
+            height: 500px;
+        }
+        .texto-infoPersonal{
+            width: 600px;
+            margin: 0 0 0 45px;
+            .titulo-infoPersonal{
+                @extend %estiloTituloPag;
+                margin: 0 0 15px 0;
             }
-    }
+            .parrafo-infoPersonal{
+                width: 600px;
+            }
+
+        }
+
+  }
 }
+
+// main{
+//     .infoPersonal{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         margin: 50px 0 50px 0;
+//         width: auto;
+//             .fotoPerfil{
+//                 /* margin: 80px 20px 0 285px; */
+//                 height: 500px;
+//                }
+//             .textPerfil{
+//                 display: flex;
+//                 flex-direction: column;
+//                 flex-wrap: wrap;
+//                 margin: 0 0 0 80px;
+//                     .textPrincipal{
+//                         @extend %estiloTituloPag;
+//                         margin: 0 0 20px 0;
+//                      }
+//                     .textoDescripcion{
+//                         width: 600px;
+//                     }
+//             }
+//     }
+// }

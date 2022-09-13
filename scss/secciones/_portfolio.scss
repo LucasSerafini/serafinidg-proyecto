@@ -1,47 +1,101 @@
-.estructura-portfolio{
+.estructura-portfolio {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 40px 0;
+  align-items: center;
+  justify-content: center;
+    .tituloPortfolio {
     display: flex;
     flex-direction: column;
-    margin: 0 0 40px 0;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 120px - 130px);
-    .tituloPortfolio{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin: 25px 0 0 0;
-        h1{
-            @extend %estiloTituloPag;
-        }
-        .subtituloPortfolio{
-            margin: 0 0 0 25px; 
-            @extend %estiloSubPag;             
-        }
+    margin: 25px 0 0 0;
+    h1 {
+      @extend %estiloTituloPag;
     }
-        .container-galeria{
-            display: grid;
-            margin: 0 0 50px 0;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas:
-             "work1 work2 work3"
-             "work4 work5 work6";
-            justify-items: center;
-            align-self: center;
-            justify-content: center;
-            div{
-                height: 200px;
-                margin: 0 0 25px 0;
-                img{
-                    width: 300px;
-                    overflow: hidden;
-                    margin: 5px;
-                    &:hover{
-                        transform: scale(1.1);
-                        transition: 1s;
-                    }
-                }
-            }
+    .subtituloPortfolio {
+      margin-top: 25px; 
+      @extend %estiloSubPag;
+      padding: 0;
+    }
+  }
+  .grid-container-porfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "img1 img2 img3"
+      "img4 img5 img6";
+    .img1 {
+      grid-area: img1;
+      img{
+        &:hover{
+            @extend %animacionImagenPort;
         }
+         @extend %formatoImagenPort;
+          }
+    }
+
+    .img2 {
+      grid-area: img2;
+      img{
+        &:hover{
+            @extend %animacionImagenPort;
+        }
+         @extend %formatoImagenPort;
+          }
+    }
+
+    .img3 {
+      grid-area: img3;
+      img{
+        &:hover{
+            @extend %animacionImagenPort;
+        }
+         @extend %formatoImagenPort;
+          }
+    }
+
+    .img4 {
+      grid-area: img4;
+      img{
+        &:hover{
+            @extend %animacionImagenPort;
+        }
+         @extend %formatoImagenPort;
+          }
+    }
+
+    .img5 {
+      grid-area: img5;
+      img{
+        &:hover{
+            @extend %animacionImagenPort;
+        }
+         @extend %formatoImagenPort;
+          }
+    }
+
+    .img6 {
+      grid-area: img6;
+      img{
+        &:hover{
+            @extend %animacionImagenPort;
+        }
+         @extend %formatoImagenPort;
+          }
+    }
+  }
+}
+
+.carousel-fotografia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    h2 {
+        @extend %estiloSubPag;
+        margin: 25px 0 25px 0;        
+    }
 }
