@@ -4,10 +4,12 @@
   main {
     .banner {
       .contenido-banner {
+        .servicio-banner{
         .realizo1 {
           font-family: "Bebas Neue", cursive;
-          font-size: 600%;
+          font-size: 500%;
         }
+      }
       }
     }
   }
@@ -17,11 +19,16 @@
   main {
     .banner {
       .contenido-banner {
+        .servicio-banner{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         .realizo1 {
           font-family: "Bebas Neue", cursive;
-          font-size: 400%;
+          font-size: 600%;
           margin: 0 6px 0 6px;
         }
+      }
       }
     }
   }
@@ -295,22 +302,36 @@
 // CONTACTO
 
 @media (max-width: 992px) {
-  .flex-formulario {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    margin: 0 10px 10px 10px;
-    .logoParaleloForm {
-      display: none;
+  .flex-contacto {
+    width: 88vw;
+    margin: 100px 0 100px 50px;
+    .presentacion-Contacto {
+      display: flex;
+      flex-direction: column;
+      margin: 30px 40px 0 0 !important;
+      width: 40vw;
     }
-    .formulario {
-      form {
-        padding: 0 15px 0 0;
-        margin: 25px;
-        textarea {
-          width: fit-content;
-        }
+    form {
+      width: 70%;
       }
-    }
   }
+}
+
+@media (max-width: 576px) {
+.flex-contacto {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: flex-start;
+  margin: 20px 0 40px 40px;
+  .presentacion-Contacto {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 30px 0 !important;
+    width: 80vw;
+  }
+  form {
+    width: 82vw;
+    }
+}
 }

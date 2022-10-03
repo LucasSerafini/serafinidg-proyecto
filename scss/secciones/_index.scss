@@ -1,47 +1,53 @@
-.header-nav { 
-    @include estiloHeader (#262626ff);
+.header-nav {
+  @include estiloHeader(#262626ff);
 }
-
-main{ 
-    .mensaje-bienvenida { 
-        z-index: -5;
-        position: absolute;
-        top: 15;
-    }
-    .banner{
-        background-image: url(../images/banner-min.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        .contenido-banner{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-                min-height: 540px;
-                z-index: 2;
-                padding: 50px 0 0 0;
-                    .presentacionBanner{
-                            z-index: 2;
-                            font-size: 100%;
-                            color: white;
-                        }
-                    .servicio-banner{
-                        display: flex;
-                         z-index: 2;
-                    }
-                    .realizo1{
-                        font-family: "Bebas Neue", cursive;
-                        font-size: 800%;
-                        margin: 13px;
-                        color: white;
-                        z-index: -1;
-                        animation-name: para-d-grafico;
-                        animation-duration: 4s;
-                        animation-iteration-count: infinite;
-                    }
-
-                
+main {
+  .mensaje-bienvenida {
+    z-index: -5;
+    position: absolute;
+    top: 15;
+  }
+  .banner {
+    background-image: url(../images/banner-min.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    .contenido-banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      min-height: 540px;
+      z-index: 2;
+      padding: 50px 0 0 0;
+      .presentacionBanner {
+        z-index: 2;
+        font-size: 100%;
+        color: white;
+      }
+      .servicio-banner {
+        display: flex;
+        z-index: 2;
+        .realizo1 {
+          font-family: "Bebas Neue", cursive;
+          font-size: 700%;
+          margin: 0 9px 0 6px;
+          color: white;
+          z-index: -1;
+          animation-name: para-d-grafico;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
         }
+      }
+      a{
+        button{
+          --bs-btn-color: rgb(255, 255, 255);
+          --bs-btn-bg: #024f49 !important;
+          --bs-btn-border-color: none;
+      --bs-btn-hover-bg: #ff7f11ff;
+          }
+        }
+      }
     }
-}
+  }
+

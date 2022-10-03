@@ -1,30 +1,35 @@
-.footer{ 
+.footer{
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100% !important;
+  background-color: $colorFondo !important;
+  justify-content: center;
+  align-items: center;
+  .invitacion-footer{
+    margin-bottom: 0 !important;
+    padding: 0 15px 0 15px;
+  }
+  .listFooter {
     display: flex;
-    flex-direction: row;
-    height: 100px;
-    width: 100vw !important;
-    background-color: $colorFondo !important;
     justify-content: center;
+    padding: 25px;
+    margin-bottom: 0 !important;
+    list-style-type: none;
     align-items: center;
-        .listFooter{
-            display: flex;
-            justify-content: center;
-            padding: 25px;
-            margin-bottom: 0 !important;
-            /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
-            list-style-type: none;
-            a {
-                .iconosRedes{
-                    width: 25px;
-                    margin: 10px;
-                    &:hover{
-                        transform: scale(1.1);
-                        transition: .3s;
-                    }
-                }
-            }
+    a {
+      .iconosRedes {
+        width: 25px;
+        margin: 10px;
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s;
         }
-        .logoFooter{
-            width: 40px;
-        }
+      }
+    }
+  }
+  .logoFooter {
+    width: 40px;
+    margin: 0 25px 0 15px;
+  }
 }

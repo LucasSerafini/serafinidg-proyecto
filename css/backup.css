@@ -21,7 +21,7 @@
 /* HEADER BOOPSTRAP */
 /* NAV */
 .header-nav {
-  position: sticky;
+  position: #ece5f0;
   top: 0;
   z-index: 3;
   width: 100vw;

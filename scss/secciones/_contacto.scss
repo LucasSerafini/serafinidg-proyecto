@@ -1,20 +1,53 @@
-.flex-formulario{
+.flex-contacto {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  align-items: flex-start;
+  margin: 100px 0 100px 100px;
+  .presentacion-Contacto {
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    margin: 0 !important;
-    .logoParaleloForm{
-         width: 550px;
+    flex-direction: column;
+    margin: 30px 70px 0 0 !important;
+    i {
+      animation-name: icon-dialog;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
     }
-    .formulario{
-        form{
-        h1{
-            @extend %estiloTituloPag;
-        }    
-        padding: 25px;
-        textarea{ 
-        width: fit-content;         
-        }
-        }
+    h1 {
+      margin-top: 25px;
+      @extend %estiloTituloPag;
     }
+  }
+  form {
+    .btn-primary {
+      --bs-btn-bg: #024f49 !important;
+      --bs-btn-border-color: none;
+      --bs-btn-hover-bg: #ff7f11ff;
+    }
+  }
 }
+
+form {
+  width: 50vw;
+}
+
+// .flex-formulario{
+//     display: flex;
+//     flex-direction: row;
+//     width: 100vw;
+//     margin: 0 !important;
+//     .logoParaleloForm{
+//          width: 550px;
+//     }
+//     .formulario{
+//         form{
+//         h1{
+//             @extend %estiloTituloPag;
+//         }
+//         padding: 25px;
+//         textarea{
+//         width: fit-content;
+//         }
+//         }
+//     }
+// }

@@ -11,7 +11,20 @@
       color: #ece5f05f;
     }
   }
-  
 
+  @keyframes icon-dialog {
+    0% {
+      scale: 1.0;
+      color: rgb(48, 47, 47);
+    }
+    50% {
+      scale: 1.1;
+      color: #ff7f11ff;
+    }
+    100% {
+      color: 1.0;
+      color: rgb(48, 47, 47);
+    }
+  }
   
  

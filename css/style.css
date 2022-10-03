@@ -5,9 +5,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 /* SCSS HEX */
-main .flex-infoPersonal .texto-infoPersonal .titulo-infoPersonal, .flex-content-serv .tituloServicios, .estructura-portfolio .tituloPortfolio h1, .flex-formulario .formulario form h1 {
+main .flex-infoPersonal .texto-infoPersonal .titulo-infoPersonal, .flex-content-serv .tituloServicios, .estructura-portfolio .tituloPortfolio h1, .flex-contacto .presentacion-Contacto h1 {
   font-family: "Poppins", sans-serif;
-  font-size: 300%;
+  font-size: 250%;
   color: #003b36; }
 
 .estructura-portfolio .tituloPortfolio .subtituloPortfolio, .carousel-fotografia h2 {
@@ -33,8 +33,6 @@ main .flex-infoPersonal .texto-infoPersonal .titulo-infoPersonal, .flex-content-
   position: sticky;
   top: 0;
   z-index: 3;
-  width: 100vw !important;
-  padding: 0;
   background-color: #ece5f0 !important; }
   .header-nav .navbar-nav .page-html {
     font-size: 90%;
@@ -53,25 +51,29 @@ main .flex-infoPersonal .texto-infoPersonal .titulo-infoPersonal, .flex-content-
   display: flex;
   flex-direction: row;
   height: 100px;
-  width: 100vw !important;
+  width: 100% !important;
   background-color: #ece5f0 !important;
   justify-content: center;
   align-items: center; }
+  .footer .invitacion-footer {
+    margin-bottom: 0 !important;
+    padding: 0 15px 0 15px; }
   .footer .listFooter {
     display: flex;
     justify-content: center;
     padding: 25px;
     margin-bottom: 0 !important;
-    /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
-    list-style-type: none; }
+    list-style-type: none;
+    align-items: center; }
     .footer .listFooter a .iconosRedes {
       width: 25px;
       margin: 10px; }
       .footer .listFooter a .iconosRedes:hover {
         transform: scale(1.1);
-        transition: .3s; }
+        transition: 0.3s; }
   .footer .logoFooter {
-    width: 40px; }
+    width: 40px;
+    margin: 0 25px 0 15px; }
 
 .header-nav {
   background-color: #262626ff; }
@@ -101,15 +103,20 @@ main .banner {
     main .banner .contenido-banner .servicio-banner {
       display: flex;
       z-index: 2; }
-    main .banner .contenido-banner .realizo1 {
-      font-family: "Bebas Neue", cursive;
-      font-size: 800%;
-      margin: 13px;
-      color: white;
-      z-index: -1;
-      animation-name: para-d-grafico;
-      animation-duration: 4s;
-      animation-iteration-count: infinite; }
+      main .banner .contenido-banner .servicio-banner .realizo1 {
+        font-family: "Bebas Neue", cursive;
+        font-size: 700%;
+        margin: 0 9px 0 6px;
+        color: white;
+        z-index: -1;
+        animation-name: para-d-grafico;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; }
+    main .banner .contenido-banner a button {
+      --bs-btn-color: rgb(255, 255, 255);
+      --bs-btn-bg: #024f49 !important;
+      --bs-btn-border-color: none;
+      --bs-btn-hover-bg: #ff7f11ff; }
 
 main .flex-infoPersonal {
   display: flex;
@@ -158,11 +165,15 @@ main .flex-infoPersonal {
       .flex-content-serv .infoServicios .placaServ .iconosServ {
         width: 70px;
         height: 70px; }
+      .flex-content-serv .infoServicios .placaServ i {
+        width: 70px;
+        height: 70px; }
       .flex-content-serv .infoServicios .placaServ .titleServ {
         font-size: 100%;
         font-weight: 700;
         text-align: center;
-        margin: 25px 0 0 0; }
+        margin: 25px 0 0 0;
+        color: #024f49; }
       .flex-content-serv .infoServicios .placaServ .parrafoServ {
         margin: 5px 0 0 0;
         text-align: center;
@@ -210,17 +221,29 @@ main .flex-infoPersonal {
   .carousel-fotografia h2 {
     margin: 25px 0 25px 0; }
 
-.flex-formulario {
+.flex-contacto {
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  margin: 0 !important; }
-  .flex-formulario .logoParaleloForm {
-    width: 550px; }
-  .flex-formulario .formulario form {
-    padding: 25px; }
-    .flex-formulario .formulario form textarea {
-      width: fit-content; }
+  width: 80vw;
+  align-items: flex-start;
+  margin: 100px 0 100px 100px; }
+  .flex-contacto .presentacion-Contacto {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 70px 0 0 !important; }
+    .flex-contacto .presentacion-Contacto i {
+      animation-name: icon-dialog;
+      animation-duration: 4s;
+      animation-iteration-count: infinite; }
+    .flex-contacto .presentacion-Contacto h1 {
+      margin-top: 25px; }
+  .flex-contacto form .btn-primary {
+    --bs-btn-bg: #024f49 !important;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-bg: #ff7f11ff; }
+
+form {
+  width: 50vw; }
 
 @keyframes para-d-grafico {
   0% {
@@ -230,16 +253,31 @@ main .flex-infoPersonal {
   100% {
     color: #ece5f05f; } }
 
+@keyframes icon-dialog {
+  0% {
+    scale: 1.0;
+    color: #302f2f; }
+  50% {
+    scale: 1.1;
+    color: #ff7f11ff; }
+  100% {
+    color: 1.0;
+    color: #302f2f; } }
+
 @media (max-width: 768px) {
-  main .banner .contenido-banner .realizo1 {
+  main .banner .contenido-banner .servicio-banner .realizo1 {
     font-family: "Bebas Neue", cursive;
-    font-size: 600%; } }
+    font-size: 500%; } }
 
 @media (max-width: 576px) {
-  main .banner .contenido-banner .realizo1 {
-    font-family: "Bebas Neue", cursive;
-    font-size: 400%;
-    margin: 0 6px 0 6px; } }
+  main .banner .contenido-banner .servicio-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .banner .contenido-banner .servicio-banner .realizo1 {
+      font-family: "Bebas Neue", cursive;
+      font-size: 600%;
+      margin: 0 6px 0 6px; } }
 
 @media (max-width: 1200px) {
   main .flex-infoPersonal {
@@ -407,15 +445,28 @@ main .flex-infoPersonal {
           transition: 0.3s; } }
 
 @media (max-width: 992px) {
-  .flex-formulario {
+  .flex-contacto {
+    width: 88vw;
+    margin: 100px 0 100px 50px; }
+    .flex-contacto .presentacion-Contacto {
+      display: flex;
+      flex-direction: column;
+      margin: 30px 40px 0 0 !important;
+      width: 40vw; }
+    .flex-contacto form {
+      width: 70%; } }
+
+@media (max-width: 576px) {
+  .flex-contacto {
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    margin: 0 10px 10px 10px; }
-    .flex-formulario .logoParaleloForm {
-      display: none; }
-    .flex-formulario .formulario form {
-      padding: 0 15px 0 0;
-      margin: 25px; }
-      .flex-formulario .formulario form textarea {
-        width: fit-content; } }
+    flex-direction: column;
+    width: 80%;
+    align-items: flex-start;
+    margin: 20px 0 40px 40px; }
+    .flex-contacto .presentacion-Contacto {
+      display: flex;
+      flex-direction: column;
+      margin: 30px 0 30px 0 !important;
+      width: 80vw; }
+    .flex-contacto form {
+      width: 82vw; } }
